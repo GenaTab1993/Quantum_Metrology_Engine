@@ -110,7 +110,7 @@ When running under `schrodinger` mode, the console outputs deterministic verific
 ```
 
 #### Schrödinger Analytical Visualization Series:
-* **Panel 1 (State Evolution):** Shows the state vector components fluctuating heavily across the time steps (\(t=0\text{ms}\) to \(t=2\text{ms}\)). Amplitudes stretch and reverse sign, mirroring the physical, high-frequency voltage fluctuations across a live driver circuit.
+* **Panel 1 (State Evolution):** Shows the state vector components fluctuating heavily across the time steps (t = 0 ms to t = 2 ms). Amplitudes stretch and reverse sign, mirroring the physical, high-frequency voltage fluctuations across a live driver circuit.
 * **Panel 2 (Basis Space):** The underlying measurement basis remains perfectly symmetric and static.
 * **Panel 3 (Projection Phase):** The non-linear barrier remains fixed, filtering the transient incoming states symmetrically.
 
@@ -122,6 +122,48 @@ When running under `schrodinger` mode, the console outputs deterministic verific
 
 ##### Epoch t = 2 ms Diagnostic Visuals
 ![Schrödinger Diagnostics t=2](schrodinger_epoch_2_complete_diagnostics.png)
+
+---
+
+### 📊 Mode 2: Heisenberg Simulation Logs & Telemetry
+Switching the control matrix to `heisenberg` yields a completely distinct physical behavior:
+
+```text
+================== QUANTUM COMPUTE PIPELINE ==================
+[+] Launching Time-Variant Analysis Framework
+[+] Operating Mode Locked: HEISENBERG
+
+ -> Constant Boundary Reference State |psi_0> Locked: [[ 0.749  0.896  0.526 -0.435  0.219]]
+
+ -> Processed Epoch [t=0hr] | Capturing Adaptive Parameters:
+    Operator Matrix O(t) Updated due to Thermal Drift Matrix Automation.
+    Extracted Observables (Eigenvalues): [[-0.1622 -0.4029]]
+
+ -> Processed Epoch [t=1hr] | Capturing Adaptive Parameters:
+    Operator Matrix O(t) Updated due to Thermal Drift Matrix Automation.
+    Extracted Observables (Eigenvalues): [[-0.1661 -0.4076]]
+
+ -> Processed Epoch [t=2hr] | Capturing Adaptive Parameters:
+    Operator Matrix O(t) Updated due to Thermal Drift Matrix Automation.
+    Extracted Observables (Eigenvalues): [[-0.1725 -0.4268]]
+--------------------------------------------------------------
+[+] Compute Phase Complete. Forwarding Buffer to Diagnostics Visualizer.
+==============================================================
+```
+
+#### Heisenberg Analytical Visualization Series:
+* **Panel 1 (State Stability):** The input bar heights remain absolutely frozen across the entire log. This isolates the system's baseline reference state at time zero.
+* **Panel 2 (Operator Drift):** The green ellipse representing the latent feature space is seen warping and tilting progressively at each time step (t = 0 hr to t = 2 hr). This models the continuous thermal degradation of the optical elements.
+* **Panel 3 (Adaptive Filtering):** The projection mapping tracks the drifting operators, proving that the network can model continuous system drifts.
+
+##### Epoch t = 0 hr Diagnostic Visuals
+![Heisenberg Diagnostics t=0](heisenberg_epoch_0_complete_diagnostics.png)
+
+##### Epoch t = 1 hr Diagnostic Visuals
+![Heisenberg Diagnostics t=1](heisenberg_epoch_1_complete_diagnostics.png)
+
+##### Epoch t = 2 hr Diagnostic Visuals
+![Heisenberg Diagnostics t=2](heisenberg_epoch_2_complete_diagnostics.png)
 
 ---
 
