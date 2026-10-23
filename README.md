@@ -64,14 +64,20 @@ The neural network's computational architecture maps directly to the laws of qua
 When dealing with a time-dependent system Hamiltonian Ĥ(t), the engine provides two distinct execution modes selected via a clean, decoupled configuration layer:
 
 ### 🌌 4.1 The Schrödinger Framework (`execution_mode = "schrodinger"`)
-* **Mathematical Concept:** Operators remain stationary (\(d\hat{O}/dt = 0\)), while the state vector evolves dynamically over time:
-  \[\vert{}\psi(t)\rangle = \hat{U}(t, t_0)\vert{}\psi(t_0)\rangle\]
-* **Hardware Implementation:** Real-time data streaming and transient signal tracking. The network's weight matrices (\(W_1, W_2\)) are frozen. The input tensor is a continuously changing time-series stream of physical variables (such as transient low-side switching waveforms monitored during a 40ms automated scope capture).
+* **Mathematical Concept:** Operators remain stationary (dÔ/dt = 0), while the state vector evolves dynamically over time:  
+
+  |ψ(t)⟩ = Û(t, t₀)|ψ(t₀)⟩
+* **Hardware Implementation:** Real-time data streaming and transient signal tracking. The network's weight matrices (W₁, W₂) are frozen. The input tensor is a continuously changing time-series stream of physical variables (such as transient low-side switching waveforms monitored during a 40ms automated scope capture).
 
 ### 🧮 4.2 The Heisenberg Framework (`execution_mode = "heisenberg"`)
-* **Mathematical Concept:** The boundary reference state is stationary (\(\vert{}\psi\rangle = \vert{}\psi(0)\rangle\)), while the operators themselves evolve according to the Heisenberg equation of motion:
-  \[\frac{d\hat{O}}{dt} = \frac{i}{\hbar}[\hat{H}, \hat{O}]\]
-* **Hardware Implementation:** Continuous tracking of environmental degradation, such as progressive thermal expansion of an lens barrel over hours of laboratory operation. The initial boundary state vector \(\vert{}\psi_0\rangle\) remains locked at constant room-temperature parameters, while online calibration tracking injects time-dependent stochastic perturbations directly into the linear operator weight matrices \(W_1(t)\) and \(W_2(t)\). The operators dynamically bend over time to maintain sub-nanometer calibration accuracy.
+* **Mathematical Concept:** The boundary reference state is stationary:  
+
+  |ψ⟩ = |ψ(0)⟩  
+  
+  While the operators themselves evolve according to the Heisenberg equation of motion:
+  $$\frac{d\hat{O}}{dt} = \frac{i}{\hbar}[\hat{H}, \hat{O}]$$
+* **Hardware Implementation:** Continuous tracking of environmental degradation, such as progressive thermal expansion of an lens barrel over hours of laboratory operation. The initial boundary state vector |ψ₀⟩ remains locked at constant room-temperature parameters, while online calibration tracking injects time-dependent stochastic perturbations directly into the linear operator weight matrices W₁(t) and W₂(t). The operators dynamically bend over time to maintain sub-nanometer calibration accuracy.
+
 
 ---
 
