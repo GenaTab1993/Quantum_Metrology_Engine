@@ -227,6 +227,6 @@ Ensure your environment is configured with the required Python libraries:
    `QUANTUM_METROLOGY_ENGINE.ipynb`
 
 ---
-**Developer/Physicist:** Gennady Tabachnik  
+**Developer/Physicist:** Genady Tabachnik  
 **Validation Domain:** Post-Silicon Electro-Optical Integration & Deep Learning  
 **Status:** Functional Production-Ready Core Framework Locked.
