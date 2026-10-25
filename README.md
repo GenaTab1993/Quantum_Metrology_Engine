@@ -230,3 +230,7 @@ Ensure your environment is configured with the required Python libraries:
 **Developer/Physicist:** Genady Tabachnik  
 **Validation Domain:** Post-Silicon Electro-Optical Integration & Deep Learning  
 **Status:** Functional Production-Ready Core Framework Locked.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
