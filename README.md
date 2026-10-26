@@ -1,7 +1,7 @@
 
 # Quantum Metrology Engine: Time-Variant Hardware Verification Framework
 
-An advanced, production-grade automated metrology and hardware validation framework that bridges **Deep Learning** (`PyTorch`) with **Quantum Mechanical formalisms**. The engine simulates, visualizes, and automatically verifies continuous **Modulation Transfer Function (MTF)** parameters and high-frequency signal integrity tracks for state-of-the-art optical systems (e.g., industrial cameras) integrated into complex healthcare electro-optical platforms (such as **Synoia Technologies** mainboards).
+An advanced, production-grade automated metrology and hardware validation framework that bridges **Deep Learning** (`PyTorch`) with **Quantum Mechanical formalisms**. The engine simulates, visualizes, and automatically verifies continuous **Modulation Transfer Function (MTF)** parameters and high-frequency signal integrity tracks for state-of-the-art optical systems (e.g., industrial cameras) integrated into complex healthcare electro-optical platforms (such as multi-layer mainboards and embedded system architectures).
 
 The unique core of this project maps the forward pass matrix transformations of a Multi-Layer Perceptron (MLP) directly onto **Schrödinger and Heisenberg time-evolution mechanics** inside a multi-dimensional Hilbert Space (H).
 
