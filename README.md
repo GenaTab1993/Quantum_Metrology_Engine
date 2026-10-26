@@ -167,48 +167,6 @@ Switching the control matrix to `heisenberg` yields a completely distinct physic
 
 ---
 
-### 📊 Mode 2: Heisenberg Simulation Logs & Telemetry
-Switching the control matrix to `heisenberg` yields a completely distinct physical behavior:
-
-```text
-================== QUANTUM COMPUTE PIPELINE ==================
-[+] Launching Time-Variant Analysis Framework
-[+] Operating Mode Locked: HEISENBERG
-
- -> Constant Boundary Reference State |psi_0> Locked: [[ 0.749  0.896  0.526 -0.435  0.219]]
-
- -> Processed Epoch [t=0hr] | Capturing Adaptive Parameters:
-    Operator Matrix O(t) Updated due to Thermal Drift Matrix Automation.
-    Extracted Observables (Eigenvalues): [[-0.1622 -0.4029]]
-
- -> Processed Epoch [t=1hr] | Capturing Adaptive Parameters:
-    Operator Matrix O(t) Updated due to Thermal Drift Matrix Automation.
-    Extracted Observables (Eigenvalues): [[-0.1661 -0.4076]]
-
- -> Processed Epoch [t=2hr] | Capturing Adaptive Parameters:
-    Operator Matrix O(t) Updated due to Thermal Drift Matrix Automation.
-    Extracted Observables (Eigenvalues): [[-0.1725 -0.4268]]
---------------------------------------------------------------
-[+] Compute Phase Complete. Forwarding Buffer to Diagnostics Visualizer.
-==============================================================
-```
-
-#### Heisenberg Analytical Visualization Series:
-* **Panel 1 (State Stability):** The input bar heights remain absolutely frozen across the entire log. This isolates the system's baseline reference state at time zero.
-* **Panel 2 (Operator Drift):** The green ellipse representing the latent feature space $\mathcal{H}^{12}$ is seen **warping and tilting progressively** at each time step ($t=0\text{hr}$ to $t=2\text{hr}$). This models the continuous thermal degradation of the optical elements.
-* **Panel 3 (Adaptive Filtering):** The projection mapping tracks the drifting operators, proving that the network can model continuous system drifts.
-
-##### Epoch t = 0 hr Diagnostic Visuals
-![Heisenberg Diagnostics t=0](heisenberg_epoch_0_complete_diagnostics.png)
-
-##### Epoch t = 1 hr Diagnostic Visuals
-![Heisenberg Diagnostics t=1](heisenberg_epoch_1_complete_diagnostics.png)
-
-##### Epoch t = 2 hr Diagnostic Visuals
-![Heisenberg Diagnostics t=2](heisenberg_epoch_2_complete_diagnostics.png)
-
----
-
 ## 6. Setup & Deployment Instructions
 
 ### 6.1 Local Machine Dependencies
