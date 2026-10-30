@@ -6,10 +6,9 @@ An advanced, production-grade Formal Verification Engine that bridges **Deep Lea
 The unique core of this project maps the forward pass matrix transformations of a Multi-Layer Perceptron (MLP) directly onto **Schrödinger and Heisenberg time-evolution mechanics** inside a multi-dimensional Hilbert Space ($H$). Operating as a formal verification system, the engine ensures that physical hardware failure, transient anomaly, or long-term thermal degradation is deterministically mapped and collapsed into measurable, unique eigenvalues—leaving zero hidden failure states inside the compute pipeline.
 
 ---
-## Research Disclaimer & Computational Methodology
+## Research Disclaimer & Quantum-Inspired Classical Methodology
 
-**Important Note for Reviewers & Engineers:** 
-This repository serves strictly as a **conceptual Research Proof-of-Concept (PoC) and an algorithmic analogy framework**. It is designed to test a qualitative hypothesis: modeling macroscopic, post-silicon electro-optical hardware anomalies (such as transient switching noise and structural thermal drifts) using abstract mathematical representations inspired by quantum mechanical formalisms (Schrödinger and Heisenberg time-evolution mechanics within a simulated Hilbert space).
+**Important Note for Reviewers & Engineers:** This repository serves strictly as a **Quantum-Inspired Machine Learning (QIML) Proof-of-Concept (PoC)** and an algorithmic analogy framework. It is designed to test a qualitative classical modeling hypothesis: utilizing structures inspired by quantum mechanical formalisms (Schrödinger and Heisenberg time-evolution mechanics) to simulate macroscopic, post-silicon electro-optical hardware anomalies on classical system architectures.
 
 This software is an illustrative numerical simulation running on a standard classical Multi-Layer Perceptron (MLP). It does not implement a physical quantum computer architecture, nor does it calculate hardware metric boundaries using validated thermodynamic or quantum metrological equations (such as Quantum Fisher Information). The diagnostic plots, matrix modifications, and recorded eigenvalues function as parametric visual illustrations of structural operator modifications, and should be evaluated as an abstract computational modeling experiment.
 
