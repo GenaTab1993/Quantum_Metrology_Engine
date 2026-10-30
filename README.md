@@ -31,7 +31,7 @@ $$\hat{A}: H \rightarrow H$$
 Physical variables (such as energy, momentum, or structural width) are represented by self-adjoint, **Hermitian operators**:
 $$\hat{O} = \hat{O}^\dagger$$
 
-According to the spectral theorem, the only possible outcomes of measuring an observable are its real **Eigenvalues ($\lambda$)**, derived from the characteristic eigenvalue equation:
+According to the spectral theorem, the only possible outcomes of simulating an observable are its real **Eigenvalues ($\lambda$)**, derived from the characteristic eigenvalue equation:
 $$\hat{O}|\phi_n\rangle = \lambda_n|\phi_n\rangle$$
 
 ### 1.3 State Projection and Wavefunction Collapse
@@ -60,8 +60,8 @@ The neural network's computational architecture maps directly to the laws of qua
 | Computational Stage (PyTorch) | Linear Algebra Operation | Electro-Optical System Domain | Quantum Mechanical Analogy |
 | :--- | :--- | :--- | :--- |
 | **1. Ingestion Layer** | `input_data = torch.tensor(...)` | Vector of raw phase and intensity values captured by the CMOS sensor grid. | **State Vector \|ψ⟩** defined within a 5-dimensional Hilbert Space H⁵. |
-| **2. Hidden Layer Transformation** | `nn.Linear(in_features=5, out_features=12)` | Mapping raw optical parameters into an extended abstract latent feature space. | **Linear Operator Â\|ψ⟩** executing a strict **Quantum Change of Basis** into H¹². |
-| **3. Non-Linear Activation** | `nn.ReLU()` | Removing thermal floor noise floors and cutting destructive interference vectors. | **Projection Operator P̂** forcing a localized **Wavefunction Collapse** by truncating negative amplitudes where f(z) = max(0, z). |
+| **2. Hidden Layer Transformation** | `nn.Linear(in_features=5, out_features=12)` | Mapping raw optical parameters into an extended abstract latent feature space. | **Linear Operator Â\|ψ⟩** executing a conceptual **Quantum Change of Basis** into H¹². |
+| **3. Non-Linear Activation** | `nn.ReLU()` | Removing thermal floor noise floors and cutting destructive interference vectors. | **Projection Operator P̂** simulating a localized **Wavefunction Collapse** by truncating negative amplitudes where f(z) = max(0, z). |
 | **4. Structural Extraction Layer** | `nn.Linear(in_features=12, out_features=2)` | Dimensionality reduction into physical parameters (e.g., MTF score, sub-nanometer thickness). | **Observable Measurement (Ô)** extracting the precise, real **Eigenvalues (λ)** of the system state. |
 ---
 
