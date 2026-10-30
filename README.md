@@ -26,25 +26,31 @@ The mathematical motivation examines classical and quantum configuration spaces 
 
 ### 1.1 Classical Configuration Space
 
-For a finite classical register containing $N$ binary switches, the number of possible configurations is:
+For a finite classical register containing \(N\) binary switches, the number of possible configurations is:
 
 $$
 |S_{\mathrm{classical}}| = 2^N
 $$
 
-For the set of all countably infinite binary sequences:
+For the set of all countably infinite binary sequences, define:
 
 $$
 S_{\mathrm{binary}} = \{0,1\}^{\mathbb{N}}
 $$
 
-The cardinality of this configuration space is:
+Each infinite binary sequence corresponds to a subset of the natural numbers. Therefore, the configuration space is in bijective correspondence with the power set of the natural numbers:
+
+$$
+S_{\mathrm{binary}} \cong \mathcal{P}(\mathbb{N})
+$$
+
+Its cardinality is:
 
 $$
 |S_{\mathrm{binary}}| = 2^{\aleph_0} = \mathfrak{c}
 $$
 
-Here, $\aleph_0$ denotes the cardinality of the natural numbers, while $\mathfrak{c}$ denotes the cardinality of the continuum.
+Here, \(\aleph_0\) denotes the cardinality of the natural numbers, while \(\mathfrak{c}\) denotes the cardinality of the continuum.
 
 The real numbers have the same cardinality:
 
@@ -52,7 +58,7 @@ $$
 |\mathbb{R}| = \mathfrak{c} = 2^{\aleph_0}
 $$
 
-For every finite integer $N \geq 1$:
+For every finite integer \(N \geq 1\):
 
 $$
 |\mathbb{R}^N| = \mathfrak{c}
@@ -62,7 +68,7 @@ Therefore, the space of all countably infinite binary configurations and a finit
 
 ### 1.2 Quantum Hilbert-Space Structure
 
-For a register of $N$ two-level quantum systems (qubits), the composite Hilbert space is:
+For a register of \(N\) two-level quantum systems (qubits), the composite Hilbert space is:
 
 $$
 \mathcal{H}_N = (\mathbb{C}^2)^{\otimes N}
@@ -80,10 +86,10 @@ $$
 \mathbb{CP}^{2^N-1}
 $$
 
-For every finite $N \geq 1$, the cardinality of this pure-state space is:
+For every finite \(N \geq 1\), the cardinality of this pure-state space is:
 
 $$
-|S_{\mathrm{quantum}}| = \mathfrak{c}
+|\mathbb{CP}^{2^N-1}| = \mathfrak{c}
 $$
 
 Although the Hilbert-space dimension grows exponentially with the number of qubits, the cardinality of the pure-state space remains equal to the continuum for every finite register.
@@ -92,7 +98,7 @@ Entanglement changes the structure of quantum correlations and the available sta
 
 ### 1.3 Cantor's Diagonalization Theorem
 
-For any set $S$, Cantor's theorem establishes that its power set has strictly greater cardinality:
+For any set \(S\), Cantor's theorem establishes that its power set has strictly greater cardinality:
 
 $$
 |\mathcal{P}(S)| = 2^{|S|} > |S|
@@ -110,7 +116,7 @@ $$
 2^{\mathfrak{c}} > \mathfrak{c}
 $$
 
-However, these results do not establish that the physical state space of a finite-dimensional quantum register has cardinality $2^{\mathfrak{c}}$.
+However, these results do not establish that the physical state space of a finite-dimensional quantum register has cardinality \(2^{\mathfrak{c}}\).
 
 Such a conclusion would require an independent mathematical proof that the physical quantum state space is in bijective correspondence with the power set of the continuum.
 
@@ -137,7 +143,7 @@ The engine implements mathematical postulates of non-relativistic quantum mechan
 
 ### 2.1 The State Vector and Hilbert Space
 
-An isolated quantum system is represented by a normalized complex state vector $|\psi\rangle$ in a complex Hilbert space $\mathcal{H}$.
+An isolated quantum system is represented by a normalized complex state vector \(|\psi\rangle\) in a complex Hilbert space \(\mathcal{H}\).
 
 The normalization condition is:
 
@@ -145,7 +151,7 @@ $$
 \langle\psi|\psi\rangle = 1
 $$
 
-For mixed quantum states, the density-matrix representation is used:
+For mixed quantum states, the density-matrix representation is used. A valid density matrix satisfies:
 
 $$
 \rho = \rho^\dagger
@@ -156,7 +162,7 @@ $$
 Physical observables are represented by linear Hermitian operators:
 
 $$
-\hat{O} = \hat{O}^{\dagger}
+\hat{O} = \hat{O}^\dagger
 $$
 
 According to the spectral theorem, an observable satisfies the eigenvalue equation:
@@ -175,7 +181,7 @@ These eigenvalues represent the possible outcomes of measurements of the corresp
 
 ### 2.3 Quantum Measurement and Projection
 
-For a measurement associated with a non-degenerate normalized eigenstate $|\phi_n\rangle$, the corresponding projection operator is:
+For a measurement associated with a non-degenerate normalized eigenstate \(|\phi_n\rangle\), the corresponding projection operator is:
 
 $$
 \hat{P}_n = |\phi_n\rangle\langle\phi_n|
@@ -183,7 +189,7 @@ $$
 
 For a degenerate measurement outcome, the projection operator must project onto the entire corresponding eigenspace.
 
-For a projective measurement, the probability of obtaining outcome $n$ is:
+For a projective measurement, the probability of obtaining outcome \(n\) is:
 
 $$
 P(n) = \operatorname{Tr}(\rho\hat{P}_n)
@@ -195,7 +201,7 @@ $$
 P(n) = |\langle\phi_n|\psi\rangle|^2
 $$
 
-The normalized post-measurement state, conditional on obtaining outcome $n$ with nonzero probability, is:
+The normalized post-measurement state, conditional on obtaining outcome \(n\) with nonzero probability, is:
 
 $$
 \rho_n =
@@ -226,6 +232,8 @@ or:
 $$
 \rho \in \mathcal{L}(\mathcal{H})
 $$
+
+Here, \(\mathcal{L}(\mathcal{H})\) denotes the space of linear operators acting on the Hilbert space.
 
 ### 3.2 Hidden Layer
 
@@ -258,7 +266,7 @@ $$
 and, for an orthogonal projection:
 
 $$
-\hat{P}^{\dagger} = \hat{P}
+\hat{P}^\dagger = \hat{P}
 $$
 
 ### 3.4 Structural Extraction Layer
@@ -277,7 +285,7 @@ In a classical neural network, the corresponding output layer instead produces n
 
 ## 4. Architectural Implementation of Time-Variant Dynamics
 
-The engine models continuous temporal evolution governed by a time-independent system Hamiltonian $\hat{H}$ through two equivalent mathematical representations.
+The engine models continuous temporal evolution governed by a time-independent system Hamiltonian \(\hat{H}\) through two equivalent mathematical representations.
 
 ### 4.1 Schrödinger Framework
 
@@ -288,28 +296,27 @@ $$
 \exp\left(-\frac{i}{\hbar}\hat{H}t\right)
 $$
 
-The operator satisfies the unitarity condition:
+The operator satisfies the unitarity conditions:
 
 $$
-\hat{U}^{\dagger}(t)\hat{U}(t)
-=
-\hat{U}(t)\hat{U}^{\dagger}(t)
-=
-\mathbf{I}
+\hat{U}^\dagger(t)\hat{U}(t) = \mathbf{I}
+$$
+
+$$
+\hat{U}(t)\hat{U}^\dagger(t) = \mathbf{I}
 $$
 
 The state vector evolves according to:
 
 $$
-|\psi(t)\rangle =
-\hat{U}(t)|\psi(0)\rangle
+|\psi(t)\rangle = \hat{U}(t)|\psi(0)\rangle
 $$
 
 The density matrix evolves according to:
 
 $$
 \rho(t) =
-\hat{U}(t)\rho_0\hat{U}^{\dagger}(t)
+\hat{U}(t)\rho_0\hat{U}^\dagger(t)
 $$
 
 ### 4.2 Heisenberg Framework
@@ -318,7 +325,7 @@ In the Heisenberg picture, the reference state remains fixed while observables e
 
 $$
 \hat{G}(t) =
-\hat{U}^{\dagger}(t)\hat{G}_0\hat{U}(t)
+\hat{U}^\dagger(t)\hat{G}_0\hat{U}(t)
 $$
 
 The corresponding Heisenberg equation of motion is:
@@ -326,20 +333,15 @@ The corresponding Heisenberg equation of motion is:
 $$
 \frac{d\hat{G}(t)}{dt}
 =
-\frac{i}{\hbar}
-[\hat{H},\hat{G}(t)]
+\frac{i}{\hbar}[\hat{H},\hat{G}(t)]
 +
-\left(
-\frac{\partial\hat{G}}{\partial t}
-\right)_{\mathrm{explicit}}
+\left(\frac{\partial\hat{G}}{\partial t}\right)_{\mathrm{explicit}}
 $$
 
 The commutator is defined as:
 
 $$
-[\hat{A},\hat{B}]
-=
-\hat{A}\hat{B}-\hat{B}\hat{A}
+[\hat{A},\hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}
 $$
 
 ### 4.3 Automated Formal Verification
@@ -347,9 +349,9 @@ $$
 The Schrödinger and Heisenberg pictures must produce identical expectation values:
 
 $$
-\operatorname{Tr}\left[\rho(t)\hat{G}_0\right]
+\operatorname{Tr}[\rho(t)\hat{G}_0]
 =
-\operatorname{Tr}\left[\rho_0\hat{G}(t)\right]
+\operatorname{Tr}[\rho_0\hat{G}(t)]
 $$
 
 The numerical verification discrepancy is evaluated as:
@@ -358,9 +360,9 @@ $$
 \epsilon_{\mathrm{verification}}
 =
 \left|
-\operatorname{Tr}\left[\rho(t)\hat{G}_0\right]
+\operatorname{Tr}[\rho(t)\hat{G}_0]
 -
-\operatorname{Tr}\left[\rho_0\hat{G}(t)\right]
+\operatorname{Tr}[\rho_0\hat{G}(t)]
 \right|
 $$
 
@@ -379,8 +381,7 @@ The framework uses density matrices and completely positive trace-preserving qua
 A mixed quantum state can be represented as a convex combination of pure-state projectors:
 
 $$
-\rho =
-\sum_i p_i|\psi_i\rangle\langle\psi_i|
+\rho = \sum_i p_i|\psi_i\rangle\langle\psi_i|
 $$
 
 where:
@@ -415,7 +416,7 @@ $$
 \langle\phi|\rho|\phi\rangle \geq 0
 $$
 
-for every state vector $|\phi\rangle$.
+for every state vector \(|\phi\rangle\).
 
 ### 5.2 Lindblad Master Equation
 
@@ -448,12 +449,12 @@ $$
 The anticommutator is defined as:
 
 $$
-\{A,B\} = AB+BA
+\{A,B\} = AB + BA
 $$
 
-The operators $\hat{L}_k$ describe environmental interaction and dissipative channels.
+The operators \(\hat{L}_k\) describe environmental interaction and dissipative channels.
 
-Their units must be consistent with the time units and rate conventions used in the implementation.
+Their units must be consistent with the time units and rate conventions used in the implementation. In the convention above, the Lindblad operators have units consistent with inverse square root of time.
 
 ### 5.3 The Kraus Operator Representation
 
@@ -481,7 +482,7 @@ The Kraus representation is a finite-time quantum-channel description. It is not
 
 ### 5.4 Single-Qubit Amplitude-Damping Channel
 
-For a single-qubit amplitude-damping channel with damping probability $p$, the Kraus operators are:
+For a single-qubit amplitude-damping channel with damping probability \(p\), the Kraus operators are:
 
 $$
 E_0 =
@@ -505,6 +506,8 @@ $$
 0 \leq p \leq 1
 $$
 
+Here, the computational basis is taken to be \(\{|0\rangle,|1\rangle\}\), with \(|0\rangle\) the ground state and \(|1\rangle\) the excited state.
+
 The completeness relation becomes:
 
 $$
@@ -513,7 +516,7 @@ E_0^\dagger E_0 + E_1^\dagger E_1
 \mathbf{I}
 $$
 
-For independent amplitude-damping channels acting on $N$ qubits, the global Kraus operators are constructed from tensor products of the corresponding local Kraus operators.
+For independent amplitude-damping channels acting on \(N\) qubits, the global Kraus operators are constructed from tensor products of the corresponding local Kraus operators.
 
 For a local damping channel acting on each qubit, the global operators can be represented as:
 
@@ -523,7 +526,7 @@ E_{\boldsymbol{k}}
 E_{k_1}\otimes E_{k_2}\otimes\cdots\otimes E_{k_N}
 $$
 
-where each index $k_j$ identifies a local Kraus operator.
+where each index \(k_j\) identifies a local Kraus operator.
 
 ### 5.5 Generalized Mixed-State QFI Solver
 
@@ -552,8 +555,7 @@ $$
 For the spectral decomposition:
 
 $$
-\rho_\theta
-=
+\rho_\theta =
 \sum_m p_m|\phi_m\rangle\langle\phi_m|
 $$
 
@@ -602,8 +604,9 @@ For a parameter-independent Kraus channel:
 $$
 \rho_{\mathrm{out}}(\theta)
 =
-\sum_k
-E_k\rho_{\mathrm{in}}(\theta)E_k^\dagger
+\sum_k E_k
+\rho_{\mathrm{in}}(\theta)
+E_k^\dagger
 $$
 
 the derivative is:
@@ -611,13 +614,12 @@ the derivative is:
 $$
 \frac{\partial\rho_{\mathrm{out}}}{\partial\theta}
 =
-\sum_k
-E_k
+\sum_k E_k
 \frac{\partial\rho_{\mathrm{in}}}{\partial\theta}
 E_k^\dagger
 $$
 
-If the Kraus operators themselves depend on $\theta$, the full product rule must be applied:
+If the Kraus operators themselves depend on \(\theta\), the full product rule must be applied:
 
 $$
 \begin{aligned}
@@ -638,6 +640,20 @@ E_k\rho_{\mathrm{in}}
 \frac{\partial E_k^\dagger}{\partial\theta}
 \bigg]
 \end{aligned}
+$$
+
+For unitary parameter encoding with:
+
+$$
+U_\theta = e^{-i\theta G}
+$$
+
+where \(G\) is a Hermitian generator, the derivative of the encoded state is:
+
+$$
+\frac{\partial\rho_\theta}{\partial\theta}
+=
+-i[G,\rho_\theta]
 $$
 
 This formulation avoids assuming that a general noisy evolution can always be described by a single effective unitary generator.
@@ -689,7 +705,7 @@ The following values are the reported benchmark outputs supplied with this docum
 
 The simulation is configured to export an analytical visualization of the information-degradation curves.
 
-![Quantum Metrology Framework Analysis](quantum_metrology_dual_adjoint_analysis.png)
+[Quantum Metrology Framework Analysis](https://github.com/GenaTab1993/Quantum_Metrology_Engine/blob/main/quantum_metrology_dual_adjoint_analysis.png) ([View raw image](https://github.com/GenaTab1993/Quantum_Metrology_Engine/raw/main/quantum_metrology_dual_adjoint_analysis.png))
 
 The expected output filename is:
 
@@ -701,7 +717,7 @@ The image must exist in the repository at the referenced relative path for GitHu
 
 A non-zero discrepancy between the Schrödinger and Heisenberg calculations under noisy evolution requires investigation.
 
-For a quantum channel $\mathcal{E}$, the corresponding adjoint channel is defined by:
+For a quantum channel \(\mathcal{E}\), the corresponding adjoint channel is defined by:
 
 $$
 \mathcal{E}^{*}(A)
@@ -781,13 +797,13 @@ $$
 F_Q = N^2
 $$
 
-For $N=3$:
+For \(N=3\):
 
 $$
 F_Q = 9
 $$
 
-The reported ideal value of $7.72056$ differs from this standard benchmark.
+The reported ideal value of \(7.72056\) differs from this standard benchmark.
 
 This difference requires examination of the implemented generator normalization, probe preparation, and parameter-encoding convention before the result can be described as standard Heisenberg-limit scaling.
 
@@ -797,11 +813,11 @@ $$
 F_Q^{\mathrm{noisy}} = 6.85215
 $$
 
-The reported degradation percentage should be interpreted as a comparison against the reported ideal value, not automatically against the theoretical $N^2$ benchmark.
+The reported degradation percentage should be interpreted as a comparison against the reported ideal value, not automatically against the theoretical \(N^2\) benchmark.
 
 ### 7.2 Classical Numerical Complexity
 
-For an $N$-qubit register, the Hilbert-space dimension is:
+For an \(N\)-qubit register, the Hilbert-space dimension is:
 
 $$
 d = 2^N
