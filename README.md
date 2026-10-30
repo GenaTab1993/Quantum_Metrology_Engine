@@ -47,30 +47,23 @@ $$\hat{P} = |\phi_n\rangle\langle\phi_n|$$
 
 ---
 
-## 4. Structural Analogy Matrix: PyTorch Graphs to Physical Manifolds
-
-The optimization framework enforces a direct structural mathematical mapping between classical deep learning node architectures and physical hardware state trajectories:
-
-*   **PyTorch Feature Ingestion Layer:** Maps raw non-normalized telemetry data arrays, thermal metrics, and sensor signals directly into complex tensor state vector fields $|\psi\rangle$.
-*   **Linear/Weight Layers (`nn.Linear`):** Act as dense matrix transformations, functioning as linear operators processing the vector fields ($\hat{A}|\psi\rangle$).
-*   **Non-Linear Rectified Linear Activation (`nn.ReLU`):** Functions as a non-linear numerical truncation filter. It serves as an algorithmic analogy to a hard quantum projection operator ($\hat{P}$), clipping negative real-valued component trajectories in the simulated feature space to isolate stable hardware operating regions.
-*   **Loss / Metric Extraction Layer:** Evaluates the real-valued eigenvalues of our observable operators to output deterministic drift predictions and validation logs.
-
----
 ## 5. Architectural Implementation of Time-Variant Dynamics
 
 The PyTorch engine tracks continuous temporal sensor transformations and signal propagation loops governed by a time-independent Hamiltonian tracking tensor \(\hat{H}\) across two structural frameworks:
 
-### 4.1 Schrödinger Framework
+### 5.1 Schrödinger Framework
 Stationary telemetry observable matrices evaluated against a continuously time-evolving state vector field:
+
 \[\vert\psi(t)\rangle = \hat{U}(t)\vert\psi_0\rangle \quad \text{where} \quad \hat{U}(t) = \exp\left(-\frac{i}{\hbar}\hat{H}t\right)\]
 
-### 4.2 Heisenberg Framework
+### 5.2 Heisenberg Framework
 Static baseline parameter fields frozen at time zero, while the parameter encoding tracking operators evolve continuously according to the Heisenberg equation of motion:
+
 \[\hat{G}(t) = \hat{U}^\dagger(t)\hat{G}_0\hat{U}(t)\]
 
-### 4.3 Automated Verification
+### 5.3 Automated Verification
 Ensures invariant mathematical representation and physical expectation value equivalence across both formalisms within machine epsilon (\(10^{-15}\)) under pure unitary constraints on the PyTorch tensor stack:
+
 \[\text{Trace}(\rho(t)\hat{G}_0) = \text{Trace}(\rho_0\hat{G}(t))\]
 
 ---
@@ -79,8 +72,9 @@ Ensures invariant mathematical representation and physical expectation value equ
 
 To simulate realistic post-silicon degradation profiles (such as thermal drifts, switching noise, and capacitive cross-talk), the framework integrates controlled numerical perturbations directly into the PyTorch computational graphs.
 
-### 5.1 Telemetry Sensitivity Estimation (QFI Bound)
+### 6.1 Telemetry Sensitivity Estimation (QFI Bound)
 The system calculates the exact Quantum Fisher Information (QFI) metric to evaluate parameter estimation sensitivity bounds under the Symmetric Logarithmic Derivative (SLD) tensor formalism, allowing the network to identify hardware degradation velocities:
+
 \[F_Q = 4 \left[ \langle \partial_\theta \psi_\theta \vert \partial_\theta \psi_\theta \rangle - \vert \langle \psi_\theta \vert \partial_\theta \psi_\theta \rangle \vert^2 \right]\]
 
 The framework optimizes these amplitude fields across the simulated nodes, maximizing information density (\(F_Q\)) to improve signal-to-noise ratios (SNR) during automated post-silicon characterization loops.
@@ -149,6 +143,17 @@ Execute the complete core simulation script using the following workstation runt
 ```bash
 python hardware_telemetry_optimizer.py
 ```
+
+The script automatically initiates global deterministic seeding (`seed_entire_system(42)`), enforces linear operator transformations, processes the forward execution passes, and saves all 3-panel visualization dashboard assets directly to your active repository working folder.
+
+***
+
+**Developer/Engineer:** Genady Tabachnik  
+**Validation Domain:** Post-Silicon Sensor Drift Characterization & Hardware Telemetry Optimization  
+**Status:** Certified Core Framework and Visualizations Asset Track Locked.
+
+## License
+This project is licensed under the MIT License.
 
 The script automatically initiates global deterministic seeding (`seed_entire_system(42)`), enforces linear operator transformations, processes the forward execution passes, and saves all 3-panel visualization dashboard assets directly to your active repository working folder.
 
