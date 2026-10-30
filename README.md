@@ -8,40 +8,46 @@ A high-performance computational simulation framework built natively in PyTorch 
 
 ---
 
-## 1. Set-Theoretic Volume & Space Cardinality
+## 1. Structural Comparison Matrix: Schrödinger vs. Heisenberg Frameworks
 
-The engineering motivation adapts transfinite vector space properties from Cantor's Diagonalization Theorem to expand classical system configuration analysis across deep processing tracks.
-
-*   **Classical State Trajectory Bounds ($|S_{\text{classic}}| = \aleph$):** A finite hardware register configuration space scales as $2^N$. When modeling continuous temporal-thermal sensor drifts or localized parametric telemetry strings, the configuration manifolds map directly to the uncountably infinite cardinality of the real continuum:
-    $$|S_{\text{classic}}| = 2^{\aleph_0} = \aleph$$
-*   **Quantum-Inspired Multi-Layer Continuum ($|S_{\text{quantum}}| = 2^\aleph$):** By mapping classical telemetry parameters into complex amplitude vectors on an analog Bloch sphere representation, the power set expansion scales the system's structural space state representation to a higher transfinite order of infinity:
-    $$|S_{\text{quantum}}| = 2^\aleph$$
-*   **Volumetric Optimization Scaling:** According to Cantor's Theorem, the power set of any base set holds a strictly larger cardinality than the set itself:
-    $$2^\aleph > \aleph \implies |S_{\text{quantum}}| > |S_{\text{classic}}|$$
-
-This mathematical abstraction conceptually illustrates how a multi-layer tensor configuration space provides an uncountably deeper optimization volume to capture fine-grained hardware drifts compared to traditional bounded classical tracking matrices.
+| Feature / Metric | Schrödinger Framework Deployment | Heisenberg Framework Deployment |
+| :--- | :--- | :--- |
+| **Mathematical Concept** | Continuous time-evolution acts on the State Vector $|\psi(t)\rangle$; Observable Operators $\hat{O}$ remain stationary. | State Vector $|\psi_0\rangle$ remains static at $t=0$; Observable Operators $\hat{O}(t)$ evolve continuously. |
+| **Physical Tracking Target** | Dynamic transient states, streaming input data vector fields, and raw sensor array signals. | Parameter drift channels, degradation fields, and component-level structural boundaries. |
+| **PyTorch Architecture Map** | Dynamic forward pass transformations mutating intermediate layer activations across training epochs. | Static reference parameters with time-varying weight transformation arrays and weight deformation tensors. |
+| **Industrial Use Case (NVIDIA)** | Real-time automated tracking of high-speed streaming data drifts (e.g., transient MIPI CSI-2 camera telemetry). | Post-Silicon Validation, worst-case boundary analysis, and long-term thermal/voltage aging characterization loops. |
 
 ---
 
-## 2. Quantum-Inspired Postulates for Classical Telemetry Maps
+## 2. Industrial Applications & Core Engineering Conclusions
+
+### 2.1 The Schrödinger Framework: High-Throughput Stream Ingestion
+In active production pipelines, the Schrödinger approach is mathematically optimized for modeling high-frequency streaming inputs where environmental parameters change dynamically. By tracking the localized transformation across the state vector arrays, the framework acts as a high-speed telemetry diagnostic filter, predicting signal-to-noise ratio (SNR) degradations in active processing cores on the fly.
+
+### 2.2 The Heisenberg Framework: Post-Silicon Validation and Lifetime Testing
+For long-term reliability and product-qualification stress tests, the Heisenberg framework provides an immense architectural advantage. By keeping the initial hardware reference baseline state frozen at time zero, engineers can isolate and evolve the observable matrix arrays independently. This isolates worst-case corner boundaries, analyzes localized parametric bending under extended thermal-voltage stress, and map thermal drift coefficients across sub-nanometer multi-layer topologies without expanding memory overhead.
+
+---
+
+## 3. Quantum-Inspired Postulates for Classical Telemetry Maps
 
 The simulation pipeline maps physical semiconductor telemetry constraints directly onto linear algebraic structures using strict structural postulates:
 
-### 2.1 The State Space Representation Postulate
+### 3.1 The State Space Representation Postulate
 Every isolated hardware telemetry track is completely defined by a complex-valued normalized state vector $|\psi\rangle$ residing within a complex linear tensor space, satisfying strict normalization to preserve structural boundary conditions:
 $$\langle\psi|\psi\rangle = 1.0$$
 
-### 2.2 Linear Operators and Observable Estimators
-Measurable hardware metrics (such as thermal drift amplitudes, current leakage values, or frequency shifts) are represented by linear self-adjoint Hermitian matrices ($O = O^\dagger$). Resolving these matrices via the spectral theorem isolates real-valued eigenvalues corresponding to actual real-world laboratory telemetry measurements:
+### 3.2 Linear Operators and Observable Estimators
+Measurable hardware metrics (such as thermal drift amplitudes, current leakage values, or frequency shifts) are represented by linear self-adjoint Hermitian matrices ($O = O^\dagger$). Resolving these matrices via the spectral theorem isolates real-world laboratory telemetry measurements:
 $$\hat{O}|\phi_n\rangle = \lambda_n|\phi_n\rangle, \quad \lambda_n \in \mathbb{R}$$
 
-### 2.3 Non-Linear Truncation & State Projection
+### 3.3 Non-Linear Truncation & State Projection
 Physical circuit filtering or gating interactions trigger an instantaneous, non-reversible localization of the parameter amplitude into a deterministic eigenvalue subspace via explicit projection operators:
 $$\hat{P} = |\phi_n\rangle\langle\phi_n|$$
 
 ---
 
-## 3. Structural Analogy Matrix: PyTorch Graphs to Physical Manifolds
+## 4. Structural Analogy Matrix: PyTorch Graphs to Physical Manifolds
 
 The optimization framework enforces a direct structural mathematical mapping between classical deep learning node architectures and physical hardware state trajectories:
 
@@ -51,26 +57,37 @@ The optimization framework enforces a direct structural mathematical mapping bet
 *   **Loss / Metric Extraction Layer:** Evaluates the real-valued eigenvalues of our observable operators to output deterministic drift predictions and validation logs.
 
 ---
+## 5. Architectural Implementation of Time-Variant Dynamics
 
-## 4. Architectural Implementation of Time-Variant Dynamics
-
-The PyTorch engine tracks continuous temporal sensor transformations and signal propagation loops governed by a time-independent Hamiltonian tracking tensor $\hat{H}$ across two structural frameworks:
+The PyTorch engine tracks continuous temporal sensor transformations and signal propagation loops governed by a time-independent Hamiltonian tracking tensor \(\hat{H}\) across two structural frameworks:
 
 ### 4.1 Schrödinger Framework
 Stationary telemetry observable matrices evaluated against a continuously time-evolving state vector field:
-$$\vert\psi(t)\rangle = \hat{U}(t)\vert\psi_0\rangle \quad \text{where} \quad \hat{U}(t) = \exp\left(-\frac{i}{\hbar}\hat{H}t\right)$$
+\[\vert\psi(t)\rangle = \hat{U}(t)\vert\psi_0\rangle \quad \text{where} \quad \hat{U}(t) = \exp\left(-\frac{i}{\hbar}\hat{H}t\right)\]
 
 ### 4.2 Heisenberg Framework
 Static baseline parameter fields frozen at time zero, while the parameter encoding tracking operators evolve continuously according to the Heisenberg equation of motion:
-$$\hat{G}(t) = \hat{U}^\dagger(t)\hat{G}_0\hat{U}(t)$$
+\[\hat{G}(t) = \hat{U}^\dagger(t)\hat{G}_0\hat{U}(t)\]
 
 ### 4.3 Automated Verification
-Ensures invariant mathematical representation and physical expectation value equivalence across both formalisms within machine epsilon ($10^{-15}$) under pure unitary constraints on the PyTorch tensor stack:
-$$\text{Trace}(\rho(t)\hat{G}_0) = \text{Trace}(\rho_0\hat{G}(t))$$
+Ensures invariant mathematical representation and physical expectation value equivalence across both formalisms within machine epsilon (\(10^{-15}\)) under pure unitary constraints on the PyTorch tensor stack:
+\[\text{Trace}(\rho(t)\hat{G}_0) = \text{Trace}(\rho_0\hat{G}(t))\]
 
 ---
 
-## 5. System Execution & Workstation Telemetry Logs
+## 6. Classical Thermal Noise Modeling & Perturbation Filtering
+
+To simulate realistic post-silicon degradation profiles (such as thermal drifts, switching noise, and capacitive cross-talk), the framework integrates controlled numerical perturbations directly into the PyTorch computational graphs.
+
+### 5.1 Telemetry Sensitivity Estimation (QFI Bound)
+The system calculates the exact Quantum Fisher Information (QFI) metric to evaluate parameter estimation sensitivity bounds under the Symmetric Logarithmic Derivative (SLD) tensor formalism, allowing the network to identify hardware degradation velocities:
+\[F_Q = 4 \left[ \langle \partial_\theta \psi_\theta \vert \partial_\theta \psi_\theta \rangle - \vert \langle \psi_\theta \vert \partial_\theta \psi_\theta \rangle \vert^2 \right]\]
+
+The framework optimizes these amplitude fields across the simulated nodes, maximizing information density (\(F_Q\)) to improve signal-to-noise ratios (SNR) during automated post-silicon characterization loops.
+
+---
+
+## 7. System Execution & Workstation Telemetry Logs
 
 The framework outputs dynamic telemetry benchmarks tracking the exact parameter sensitivity metrics across discrete integration intervals:
 
@@ -81,53 +98,53 @@ The framework outputs dynamic telemetry benchmarks tracking the exact parameter 
 [+] Optimization Device Accelerator: CPU Execution Layer
 
  -> Processed Epoch [t=0ms] | Capturing Dynamic Parameters:
-    Input Vector |psi(t)> shape: torch.Size([1, 5])
+    Input Vector |psi(t)> shape: torch.Size()
     Extracted Observables (Eigenvalues): [[0.36 -0.41]]
 
  -> Processed Epoch [t=1ms] | Capturing Dynamic Parameters:
-    Input Vector |psi(t)> shape: torch.Size([1, 5])
+    Input Vector |psi(t)> shape: torch.Size()
     Extracted Observables (Eigenvalues): [[0.29  0.12]]
 
  -> Processed Epoch [t=2ms] | Capturing Dynamic Parameters:
-    Input Vector |psi(t)> shape: torch.Size([1, 5])
+    Input Vector |psi(t)> shape: torch.Size()
     Extracted Observables (Eigenvalues): [[0.23  0.05]]
 ```
 
 ---
 
-## 6. Generated Quantum Diagnostics Framework Analysis
+## 8. Generated Quantum Diagnostics Framework Analysis
 
 The engine automatically processes the multi-stage computing matrix pipelines, generating and saving high-resolution standalone diagnostic assets to the active directory.
 
-### 6.1 Schrödinger Execution Mode Subplots ($t = 0\text{ms}$ to $t = 2\text{ms}$)
+### 8.1 Schrödinger Execution Mode Subplots ($t = 0\text{ms}$ to $t = 2\text{ms}$)
 Tracks the continuous temporal evolution parameters acting directly over the input state amplitudes:
 
 ![Schrödinger Diagnostics Epoch 0](schrodinger_epoch_0_complete_diagnostics.png)
 ![Schrödinger Diagnostics Epoch 2](schrodinger_epoch_2_complete_diagnostics.png)
 
-### 6.2 Heisenberg Execution Mode Subplots ($t = 0\text{hr}$ to $t = 2\text{hr}$)
+### 8.2 Heisenberg Execution Mode Subplots ($t = 0\text{hr}$ to $t = 2\text{hr}$)
 Tracks the physical thermal drift parameters and basis bending transformations directly acting over the dynamic operators while keeping the base reference vector stationary:
 
 ![Heisenberg Diagnostics Epoch 0](heisenberg_epoch_0_complete_diagnostics.png)
 ![Heisenberg Diagnostics Epoch 1](heisenberg_epoch_1_complete_diagnostics.png)
 ![Heisenberg Diagnostics Epoch 2](heisenberg_epoch_2_complete_diagnostics.png)
 
-### 6.3 Wavefunction Collapse & Basis Bending Interpretation
+### 8.3 Wavefunction Collapse & Basis Bending Interpretation
 *   **Panel 1 (State Amplitudes):** Illustrates the evolution of the feature parameters. Positive phase vectors are rendered in blue, while negative phase drift elements collapse into red bars.
 *   **Panel 2 (Geometrical Basis Bending):** Simulates real-world circuit drift trajectories. The green solid ellipse represents the transformed $\mathcal{H}^{12}$ tracking manifold shifting dynamically relative to the original unperturbed dashed gray reference baseline.
 *   **Panel 3 (Projection Operator Projection):** Highlights the algorithmic mapping of the non-linear execution layer. The red boundary demonstrates how `nn.ReLU()` serves as a sharp physical projection truncation filter ($\max(0, Z)$), stabilizing feature propagation down to machine precision.
 
 ---
 
-## 7. Setup & Deployment Instructions
+## 9. Setup & Deployment Instructions
 
-### 7.1 Workstation Dependencies Deployment
+### 9.1 Workstation Dependencies Deployment
 Configure your engineering workstation environment with the raw computational libraries via the system terminal:
 ```bash
 pip install numpy torch matplotlib scipy
 ```
 
-### 7.2 Execution Loop Trigger
+### 9.2 Execution Loop Trigger
 Execute the complete core simulation script using the following workstation runtime command:
 ```bash
 python hardware_telemetry_optimizer.py
@@ -142,3 +159,4 @@ The script automatically initiates global deterministic seeding (`seed_entire_sy
 **Status:** Certified Core Framework and Visualizations Asset Track Locked.
 
 ## License
+This project is licensed under the MIT License.
